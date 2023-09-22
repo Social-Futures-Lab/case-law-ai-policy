@@ -40,3 +40,6 @@ venv/
 
 # Built Visual Studio Code Extensions
 *.vsix
+
+## Ignore .env files for security
+.env

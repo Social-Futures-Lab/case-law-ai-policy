@@ -16,8 +16,12 @@ Then, for each Python based section (folders that have a `requirements.txt`), ma
 run `pip install -r requirements.txt`. If you are using either conda or virtualenv, it
 is OK to have a single environment for all bits of python in this project.
 
+**Code editor advice**: To maintain code style consistency, if your editor supports
+plugins, please install the `EditorConfig` plugin.
+
 ## Datasets
-Some data is checked in
+Data / Inputs are checked into `data/` as needed. Please take care to not check in huge files
+but it is OK to version track essential files.
 
 ## Case Variant Generation
 This component handles generating cases from a set of given cases and dimensions using
