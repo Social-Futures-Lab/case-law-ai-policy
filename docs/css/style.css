@@ -98,8 +98,8 @@ aside {
 
 .fn-text {
     width: 220px !important;
-    float: left; 
-    width: 15rem; 
+    float: left;
+    width: 15rem;
     margin-left: -15rem;
 }
 
@@ -130,4 +130,62 @@ aside {
 
 .uw {
     color: #7632ff;
+}
+
+.ux-selector > .card {
+  user-select: none;
+  cursor: pointer;
+}
+.ux-selector > .card:hover {
+  border-color: #007bff!important;
+}
+.ux-selector > .card.active {
+  border-color: #007bff!important;
+  box-shadow: 0px 0px 5px 0px #007bff;
+}
+
+.h-carousel {
+  white-space: nowrap;
+  overflow-x: auto;
+  margin-bottom: 1rem;
+}
+
+.h-carousel > .card {
+  display: inline-block;
+  white-space: initial; /** reset whitespace **/
+  margin: 1rem 0;
+}
+.h-carousel-row, .padded-row {
+  position: relative;
+  padding: 0 15px;
+}
+.h-carousel-row::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 2rem;
+  background-image: linear-gradient(to right, rgba(255,255,255,1), rgba(255,255,255,0));
+  z-index: 100;
+}
+
+.h-carousel-row::after {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 2rem;
+  background-image: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,1));
+  z-index: 100;
+}
+
+.v-cloud {
+  height: 18rem;
+  border: 2px dashed #ddd;
+  border-radius: 0.25rem;
+  margin: 0 0 1em 0;
 }
