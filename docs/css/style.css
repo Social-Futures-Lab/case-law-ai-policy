@@ -11,12 +11,6 @@ body {
     max-width: 800px;
 }
 
-.full-width-container {
-    width: 100vw;
-    position: relative;
-    left: calc(-50vw + 50%);
-  }
-
 h1 {
     margin-bottom: 1rem;
 }
