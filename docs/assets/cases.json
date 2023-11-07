@@ -1,6 +1,6 @@
 [
   {
-    "id": 0,
+    "id": "mobile-game",
     "text": "I run a popular online mobile game company. We have millions of users all across the United States. Our mobile games are free, but have microtransactions. Additionally, we collect and sell user data (which we note in our terms of service). Finally, we run ads in our games, which also generate revenue. What should our legal strategy include, consider, or be?",
     "dimensions": [
       {
@@ -82,7 +82,7 @@
     ]
   },
   {
-    "id": 1,
+    "id": "apartment-overstay",
     "text": "I let someone stay in my apartment as a favor, but now he won't leave. He doesn't have a job and is causing problems. His misbehaving daughter is here, too. When I asked him for money that he owes me, he hit me. My lease says guests can stay for 72 hours, but he's been here way longer. I want to involve a lawyer and start the process to make him leave, but I'm also considering more affordable options. What's the best thing to do?",
     "dimensions": [
       {
@@ -142,7 +142,7 @@
     ]
   },
   {
-    "id": 2,
+    "id": "bookstore-board",
     "text": "I was recently invited to join a board of directors for my local bookstore. I’ve never served on a board before. What do I need to know about this service? Additionally, there are a few things that concern me. First, I enjoy patronizing a number of bookstores around the city. Second, my uncle owns one of these bookstores. Finally, I own a substantial amount of Barnes and Nobles stock. Should I have any concerns, legal or otherwise, with joining this board?",
     "dimensions": [
       {
