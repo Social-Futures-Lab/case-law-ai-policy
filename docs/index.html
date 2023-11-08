@@ -5,14 +5,16 @@
   <title>Case Law for AI Policy - Project Website</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"> -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" href="./css/style.css">
   <script src="https://pettanjs.github.io/dfcjs/dfc.js" type="text/javascript"></script>
+  <script src="./js/index.js" type="text/javascript"></script>
 </head>
 
 <body class="d-flex justify-content-center">
 
-<div class="col-lg-10 main-body">
+<div class="col-sm-12 col-lg-10 main-body">
 
   <h1>Case Law for AI Policy</h1>
   <h5>Democratically Aligning AI with Human Preferences through Case Repositories</h5>
@@ -40,14 +42,14 @@
   <p class="metadata">
     <strong>Related Publications:</strong>
     <br>
-    <span><a href="./assets/pubs/mp2_workshop_case_law.pdf">Case Repositories: Towards Case-Based Reasoning for AI Alignment</a>, <em>Preprint</em>, Under Submission (Workshop)</span>
+    <span><a href="./assets/pubs/mp2_workshop_case_law.pdf">Case Repositories: Towards Case-Based Reasoning for AI Alignment</a>, <em>forthcoming</em>, Moral Philosophy + Psychology (MP2) Workshop @ NeurIPS 2023</span>
     <br>
     <span><a href="https://arxiv.org/abs/2310.07019#">Case Law Grounding: Aligning Judgments of Humans and AI on Socially-Constructed Concepts</a>, <em>Preprint</em>, Under Submission</span>
   </p>
 
   <section>
     <h3>Introduction</h3>
-    <p>Traditionaly, when we talk about "policy" for AI, we often think about broad statements like: "", "", or "".
+    <p>Traditionally, when we talk about "policy" for AI, we often think about broad statements like: "", "", or "".
     However, it can be diffcult to both <em>create</em> and <em>apply</em> these kinds of policies when we encounter the intricacies of how AI interacts with socially-situated everyday settings,
 
     Thus, we argue that a publicly accepted, actionable, and auditable policy for AI cannot rely on high-level guidelines alone.
@@ -71,24 +73,68 @@
 
       <p>Explore Examples:</p>
       <div class="row h-carousel-row">
-        <div id="case-select-dimensions" class="col-12 h-carousel ux-selector">
-          <div class="card" style="width: 18rem;">
+        <div id="case-select-dimensions" class="col-12 h-carousel ux-selector" style="display: flex; align-items: start">
+          <div class="card case-card" onclick="fetchDimensions('mobile-game')">
             <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="card-link">Card link</a>
-              <a href="#" class="card-link">Another link</a>
+              <h5 class="card-title">Legal strategy for mobile game</h5>
+              <p class="card-text">I run a popular online mobile game company. We have millions of users all across the United States. Our mobile games are free, but have microtransactions. Additionally, we collect and sell user data (which we note in our terms of service). Finally, we run ads in our games, which also generate revenue. What should our legal strategy include, consider, or be?</p>
+            </div>
+          </div>
+          <div class="card case-card" onclick="fetchDimensions('apartment-overstay')">
+            <div class="card-body">
+              <h5 class="card-title">Guest overstaying in apartment</h5>
+              <p class="card-text">I let someone stay in my apartment as a favor, but now he won't leave. He doesn't have a job and is causing problems. His misbehaving daughter is here, too. When I asked him for money that he owes me, he hit me. My lease says guests can stay for 72 hours, but he's been here way longer. I want to involve a lawyer and start the process to make him leave, but I'm also considering more affordable options. What's the best thing to do?</p>
+            </div>
+          </div>
+          <div class="card case-card" onclick="fetchDimensions('bookstore-board')">
+            <div class="card-body">
+              <h5 class="card-title">Bookstore board of directors</h5>
+              <p class="card-text">I was recently invited to join a board of directors for my local bookstore. I’ve never served on a board before. What do I need to know about this service? Additionally, there are a few things that concern me. First, I enjoy patronizing a number of bookstores around the city. Second, my uncle owns one of these bookstores. Finally, I own a substantial amount of Barnes and Nobles stock. Should I have any concerns, legal or otherwise, with joining this board?</p>
             </div>
           </div>
         </div>
       </div>
 
       <p>We then engage with experts in workshops to brainstorm dimensions:</p>
-      <div class="row padded-row">
+      <div class="row padded-row" id="dimensions-placeholder">
         <div class="col-12 v-cloud">
           (Please select a case from the examples above to see the expert dimensions)
         </div>
+      </div>
+
+      <div class="col-12 h-carousel" id="dimensions-display" style="display: flex; align-items: start">
+        <!-- <div class="card" style="width: 18rem;">
+          <div class="card-header">
+            User attribute: geography
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"><span class="quote-text">Where is the game operating and are there applicable and regulatory requirements (e.g., California = CCPA / CPRA)? — P13, attorney.</span></li>
+          </ul>
+        </div>
+        <div class="card" style="width: 18rem;">
+          <div class="card-header">
+            User attribute: vulnerable status
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"><span class="quote-text">Do the users include minors? — P6, law school dean.</span></li>
+          </ul>
+        </div>
+        <div class="card" style="width: 18rem;">
+          <div class="card-header">
+            Legal: standardized practices
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"><span class="quote-text">What type of user data is being collected and sold? (Personally Identifiable Information, biometric, etc.) — P7, law student.</span></li>
+          </ul>
+        </div>
+        <div class="card" style="width: 18rem;">
+          <div class="card-header">
+            Legal: complexity
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"><span class="quote-text">Advertisements implicate US federal and state laws, as well as several global laws depending on where the game is offered. — P13, attorney.</span></li>
+          </ul>
+        </div> -->
       </div>
 
       <p>If you're interested in further findings with experts, please read our <a href="#">Blog Post</a> about Phase 1.</p>
@@ -104,52 +150,52 @@
       </p>
 
       <p>Please select a case below:</p>
-      <div id="case-select-synthesize" class="row h-carousel-row">
-        <div class="col-12 h-carousel ux-selector">
-          <div class="card active" style="width: 18rem;">
+      <div class="row h-carousel-row">
+        <div class="col-12 h-carousel ux-selector" style="display: flex; align-items: start">
+          <div class="card case-card" onclick="revealDimensionSelector('mobile-game')">
             <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="card-link">Card link</a>
-              <a href="#" class="card-link">Another link</a>
+              <h5 class="card-title">Legal strategy for mobile game</h5>
+              <p class="card-text">I run a popular online mobile game company. We have millions of users all across the United States. Our mobile games are free, but have microtransactions. Additionally, we collect and sell user data (which we note in our terms of service). Finally, we run ads in our games, which also generate revenue. What should our legal strategy include, consider, or be?</p>
             </div>
           </div>
-
-          <div class="card" style="width: 18rem;">
+          <div class="card case-card" onclick="revealDimensionSelector('apartment-overstay')">
             <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="card-link">Card link</a>
-              <a href="#" class="card-link">Another link</a>
+              <h5 class="card-title">Guest overstaying in apartment</h5>
+              <p class="card-text">I let someone stay in my apartment as a favor, but now he won't leave. He doesn't have a job and is causing problems. His misbehaving daughter is here, too. When I asked him for money that he owes me, he hit me. My lease says guests can stay for 72 hours, but he's been here way longer. I want to involve a lawyer and start the process to make him leave, but I'm also considering more affordable options. What's the best thing to do?</p>
             </div>
           </div>
-
-          <div class="card" style="width: 18rem;">
+          <div class="card case-card" onclick="revealDimensionSelector('bookstore-board')">
             <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="card-link">Card link</a>
-              <a href="#" class="card-link">Another link</a>
-            </div>
-          </div>
-
-          <div class="card" style="width: 18rem;">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="card-link">Card link</a>
-              <a href="#" class="card-link">Another link</a>
+              <h5 class="card-title">Bookstore board of directors</h5>
+              <p class="card-text">I was recently invited to join a board of directors for my local bookstore. I’ve never served on a board before. What do I need to know about this service? Additionally, there are a few things that concern me. First, I enjoy patronizing a number of bookstores around the city. Second, my uncle owns one of these bookstores. Finally, I own a substantial amount of Barnes and Nobles stock. Should I have any concerns, legal or otherwise, with joining this board?</p>
             </div>
           </div>
         </div>
       </div>
+
       <div class="form-group">
-        And then select a dimension, to view alternative cases generated by GPT-4:
+        And then select a dimension, followed by a value, to view alternative cases generated by GPT-4:
       </div>
+
+      <div class="row margin-tb-1">
+        <div class="col-md-6">
+          <select class="form-select" aria-label="Default select example" id="dimension-selector" style="display: none">
+          </select>
+        </div>
+
+        <div class="col-md-6">
+          <select class="form-select" aria-label="Default select example" id="level-selector" style="display: none">
+
+          </select>
+        </div>
+
+      </div>
+
+      <div class="margin-tb-1">
+        <p id="generated-case"></p>
+      </div>
+
+
 
       <h5>Measuring the Quality of the Case Repository</h5>
       <p>
@@ -172,10 +218,71 @@
         Since the policy in our process is defined by grounding against accepted judgments on cases (precedents), it is important for community or populus to agree on the legitimacy of the precedent decisions of cases in the case repository.
         Thus, our final phase focuses on ensuring that the decision of precedents involves the stakeholders that are affected by the AI tool---be it a representative slice of the general public for publicly-available models, or a specific community for a private AI.
       </p>
-      <div class="democratic">
+
+      <div class="row margin-tb-1">
+
+        <div class="col-sm-12 col-md-6 offset-md-3">
+          <div class="card" onclick="revealDimensionSelector('mobile-game')">
+            <div class="card-body">
+              <h5 class="card-title">Legal strategy for mobile game</h5>
+              <p class="card-text">I run a popular online mobile game company. We have millions of users all across the United States. Our mobile games are free, but have microtransactions. Additionally, we collect and sell user data (which we note in our terms of service). Finally, we run ads in our games, which also generate revenue. What should our legal strategy include, consider, or be?</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h5>Response Templates</h5>
+
+      <div class="template-wrapper">
+
+          <div class="card template-button">
+            <!-- <img src="..." class="card-img-top" alt="..."> -->
+            <div class="card-body">
+              <h5 class="card-title">Content violation</h5>
+              <p class="card-text">Displays a warning message that the user's input violates the AI's content policy.</p>
+              <button class="btn btn-primary" onclick="getResponseFromTemplate('content-violation')">See example</button>
+            </div>
+          </div>
+
+          <div class="card template-button">
+            <div class="card-body">
+              <h5 class="card-title">Refusal to answer</h5>
+              <p class="card-text">Avoids providing a response to the input and advises the user to seek professional advice instead.</p>
+              <button class="btn btn-primary" onclick="getResponseFromTemplate('refusal')">See example</button>
+            </div>
+          </div>
+
+          <div class="card template-button">
+            <div class="card-body">
+              <h5 class="card-title">High-level answer without facts</h5>
+              <p class="card-text">Provides a response that answers the input in broad strokes, stating advice rather than facts.</p>
+              <button class="btn btn-primary" onclick="getResponseFromTemplate('general-answer')">See example</button>
+            </div>
+          </div>
+
+          <div class="card template-button">
+            <div class="card-body">
+              <h5 class="card-title">Specific answer with facts</h5>
+              <p class="card-text">Provides a detailed response that cites specific facts relevant to the input.</p>
+              <button class="btn btn-primary" onclick="getResponseFromTemplate('specific-answer')">See example</button>
+            </div>
+          </div>
+
+          <div class="card template-button">
+            <div class="card-body">
+              <h5 class="card-title">Ask a follow-up question</h5>
+              <p class="card-text">Responds with a question requesting more information.</p>
+              <button class="btn btn-primary" onclick="getResponseFromTemplate('follow-up')">See example</button>
+            </div>
+          </div>
 
 
       </div>
+
+      <div>
+        <p id="templated-response"></p>
+      </div>
+
     </section>
   </section>
 
@@ -200,6 +307,7 @@
     This project was part of the OpenAI "Democratic Inputs to AI" grant.
 
   </section>
+
 </div>
 </body>
 </html>

@@ -61,9 +61,9 @@ img {
     /* max-width: 100%; */
 }
 
-select {
+/* select {
     display: none !important;
-}
+} */
 
 .refs {
     padding: 0.1rem 0 5rem 0;
@@ -188,4 +188,33 @@ aside {
   border: 2px dashed #ddd;
   border-radius: 0.25rem;
   margin: 0 0 1em 0;
+}
+
+.case-card {
+  min-width: 25rem;
+  margin: 0rem 0.5rem 0rem 0.5rem !important;
+}
+
+.quote-text {
+  font-style: italic;
+  color: #888;
+}
+
+.dimension-card {
+  min-width: 14rem;
+  margin: 0rem 0.5rem 0rem 0.5rem !important;
+}
+
+.margin-tb-1 {
+  margin: 1rem 0 1rem 0;
+}
+
+.template-button {
+  max-width: 15rem;
+  margin: 0 1rem 1rem 0;
+}
+
+.template-wrapper {
+  display: flex;
+  flex-flow: row wrap;
 }
