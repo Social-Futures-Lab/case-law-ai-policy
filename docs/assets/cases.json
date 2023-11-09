@@ -31,7 +31,7 @@
       },
       {
         "description": "Legal: complexity",
-        "quote": "Advertisements implicate US federal and state laws, as well as several global laws depending on where the game is offered. — P13, attorney.",
+        "quote": "\"Advertisements implicate US federal and state laws, as well as several global laws depending on where the game is offered.\" — P13, attorney.",
         "generated": [
           {
             "level": "Global expansion and ads",
@@ -49,7 +49,7 @@
       },
       {
         "description": "User attribute: vulnerable status",
-        "quote": "Do the users include minors? — P6, law school dean.",
+        "quote": "\"Do the users include minors?\" — P6, law school dean.",
         "generated": [
           {
             "level": "Yes, many users are minors",
@@ -63,7 +63,7 @@
       },
       {
         "description": "Legal: standardized practices",
-        "quote": "What type of user data is being collected and sold? (Personally Identifiable Information, biometric, etc.) — P7, law student.",
+        "quote": "\"What type of user data is being collected and sold? (Personally Identifiable Information, biometric, etc.)\" — P7, law student.",
         "generated": [
           {
             "level": "Basic demographic user data",
@@ -87,7 +87,7 @@
     "dimensions": [
       {
         "description": "User query: scope",
-        "quote": "The user seems to be seeking advice on a process for eviction. — P9, postdoctoral researcher in law.",
+        "quote": "\"The user seems to be seeking advice on a process for eviction.\" — P9, postdoctoral researcher in law.",
         "generated": [
           {
             "level": "Eviction",
@@ -101,7 +101,7 @@
       },
       {
         "description": "Legal: complexity",
-        "quote": "There's potential criminal assault here too. — P9, postdoctoral researcher in law.",
+        "quote": "\"There's potential criminal assault here too.\" — P9, postdoctoral researcher in law.",
         "generated": [
           {
             "level": "Verbal assault only",
@@ -115,7 +115,7 @@
       },
       {
         "description": "User attribute: geography",
-        "quote": "What state/city is the user living in? — P7, law student",
+        "quote": "\"What state/city is the user living in?\" — P7, law student",
         "generated": [
           {
             "level": "New York City, NY",
@@ -147,7 +147,7 @@
     "dimensions": [
       {
         "description": "User query: type of desired response",
-        "quote": "This can be answered generally without application of the facts—answer generally about board service. — P17, legal consultant.",
+        "quote": "\"This can be answered generally without application of the facts—answer generally about board service.\" — P17, legal consultant.",
         "generated": [
           {
             "level": "General advice",
@@ -161,7 +161,7 @@
       },
       {
         "description": "User query: sufficiency of information",
-        "quote": "Is this a voting board or advisory board? — P11, attorney.",
+        "quote": "\"Is this a voting board or advisory board?\" — P11, attorney.",
         "generated": [
           {
             "level": "Voting board",
@@ -175,7 +175,7 @@
       },
       {
         "description": "Legal: standardized practices",
-        "quote": "What are the disclosure requirements here? — P11, attorney.",
+        "quote": "\"What are the disclosure requirements here?\" — P11, attorney.",
         "generated": [
           {
             "level": "Personal business relationships and investments",
