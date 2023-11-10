@@ -1,5 +1,6 @@
 'use strict';
 
+
 function fetchDimensions(input_id) {
   return fetch('https://social.cs.washington.edu/case-law-ai-policy/assets/cases.json')
   .then(function (response) {
@@ -87,8 +88,10 @@ function generatedCaseSelector() {
   document.getElementById('level-selector').addEventListener('change', function () {
     let levelSelector = document.getElementById('level-selector');
     let selectedLevelIndex = levelSelector.value;
+    let target = document.getElementById('generated-case');
+    let targetWrapper = document.getElementsByClassName('chat-ui-wrapper')[0];
     if (levelSelector.options[selectedLevelIndex]) {
-      let target = document.getElementById('generated-case');
+      target.innerHTML = "";
 
       return fetch('https://social.cs.washington.edu/case-law-ai-policy/assets/cases.json')
       .then(function (response) {
@@ -100,13 +103,26 @@ function generatedCaseSelector() {
         let selectedDimension = sessionStorage.getItem('selectedDimension');
         let findDimension = findCase.dimensions.find(x => x.description === selectedDimension);
         let generatedCase = findDimension.generated[selectedLevelIndex-1].response;
-        document.getElementById('generated-case').style.display = "block";
+        target.style.display = "block";
+        targetWrapper.style.display = "block";
 
-        target.innerHTML = generatedCase;
+        let i = 0;
+        function typewriterEffect() {
+          if (i < generatedCase.length) {
+            target.innerHTML += generatedCase.charAt(i);
+            i++;
+            setTimeout(typewriterEffect, 15);
+          }
+        }
+
+        setTimeout(() => { typewriterEffect(); }, 500);
+
+        // target.innerHTML = generatedCase;
       })
 
     } else {
-      document.getElementById('generated-case').style.display = "none";
+      target.style.display = "none";
+      targetWrapper.style.display = "none";
     }
 
 
@@ -119,9 +135,35 @@ function getResponseFromTemplate(templateID) {
     return response.json();
   })
   .then (function (data) {
-    let response = data.find(x => x.template === templateID).response;
     let target = document.getElementById('templated-response');
-    target.innerHTML = response;
+    target.innerHTML = "";
+    document.getElementsByClassName('chat-ui-wrapper')[1].style.display = "block";
+    target.style.display = "block";
+    let response = data.find(x => x.template === templateID).response;
+
+    if (templateID === "content-violation") {
+      target.innerHTML = response;
+    } else {
+      let i = 0, isTag, text;
+      // target.innerHTML = response;
+      function typewriterEffectFormatted() {
+        text = response.slice(0, ++i);
+        if (text === response) return;
+
+        target.innerHTML = text;
+
+        var char = text.slice(-1);
+        if( char === '<' ) isTag = true;
+        if( char === '>' ) isTag = false;
+
+        if (isTag) return typewriterEffectFormatted();
+        setTimeout(typewriterEffectFormatted, 20);
+      }
+
+      typewriterEffectFormatted();
+    }
+
+
   })
 }
 

@@ -17,7 +17,7 @@
 <div class="col-sm-12 col-lg-10 main-body">
 
   <h1>Case Law for AI Policy</h1>
-  <h5>Democratically Aligning AI with Human Preferences through Case Repositories</h5>
+  <h4>Democratically Aligning AI with Human Preferences through Case Repositories</h4>
 
   <div class="facepile">
     <a href="https://homes.cs.washington.edu/~cqz/"><div class="circle-pic" style="background-image: url('./assets/people/cqz.png')"></div></a>
@@ -73,20 +73,23 @@
 
       <p>Explore Examples:</p>
       <div class="row h-carousel-row">
-        <div id="case-select-dimensions" class="col-12 h-carousel ux-selector" style="display: flex; align-items: start">
-          <div class="card case-card" onclick="fetchDimensions('mobile-game')">
+        <div id="case-select" class="col-12 h-carousel ux-selector" style="display: flex; align-items: start">
+          <div class="card case-card" onclick="fetchDimensions('mobile-game')" tabindex="0">
+            <img src="./assets/img/mobile-game.svg" class="card-img-top case-icon" alt="icon of a mobile game">
             <div class="card-body">
               <h5 class="card-title">Legal strategy for mobile game</h5>
               <p class="card-text">I run a popular online mobile game company. We have millions of users all across the United States. Our mobile games are free, but have microtransactions. Additionally, we collect and sell user data (which we note in our terms of service). Finally, we run ads in our games, which also generate revenue. What should our legal strategy include, consider, or be?</p>
             </div>
           </div>
-          <div class="card case-card" onclick="fetchDimensions('apartment-overstay')">
+          <div class="card case-card" onclick="fetchDimensions('apartment-overstay')" tabindex="1">
+            <img src="./assets/img/apartment.svg" class="card-img-top case-icon" alt="icon of an apartment">
             <div class="card-body">
               <h5 class="card-title">Guest overstaying in apartment</h5>
               <p class="card-text">I let someone stay in my apartment as a favor, but now he won't leave. He doesn't have a job and is causing problems. His misbehaving daughter is here, too. When I asked him for money that he owes me, he hit me. My lease says guests can stay for 72 hours, but he's been here way longer. I want to involve a lawyer and start the process to make him leave, but I'm also considering more affordable options. What's the best thing to do?</p>
             </div>
           </div>
-          <div class="card case-card" onclick="fetchDimensions('bookstore-board')">
+          <div class="card case-card" onclick="fetchDimensions('bookstore-board')" tabindex="2">
+            <img src="./assets/img/bookstore.svg" class="card-img-top case-icon" alt="icon of a collection of books">
             <div class="card-body">
               <h5 class="card-title">Bookstore board of directors</h5>
               <p class="card-text">I was recently invited to join a board of directors for my local bookstore. I’ve never served on a board before. What do I need to know about this service? Additionally, there are a few things that concern me. First, I enjoy patronizing a number of bookstores around the city. Second, my uncle owns one of these bookstores. Finally, I own a substantial amount of Barnes and Nobles stock. Should I have any concerns, legal or otherwise, with joining this board?</p>
@@ -98,7 +101,7 @@
       <p>We then engage with experts in workshops to brainstorm dimensions:</p>
       <div class="row padded-row" id="dimensions-placeholder">
         <div class="col-12 v-cloud">
-          (Please select a case from the examples above to see the expert dimensions)
+          <p class="placeholder-text">Please select a case from the examples above to see the expert dimensions</p>
         </div>
       </div>
 
@@ -151,20 +154,23 @@
 
       <p>Please select a case below:</p>
       <div class="row h-carousel-row">
-        <div class="col-12 h-carousel ux-selector" style="display: flex; align-items: start">
-          <div class="card case-card" onclick="revealDimensionSelector('mobile-game')">
+        <div id="case-select" class="col-12 h-carousel ux-selector" style="display: flex; align-items: start">
+          <div class="card case-card" onclick="revealDimensionSelector('mobile-game')" tabindex="0">
+            <img src="./assets/img/mobile-game.svg" class="card-img-top case-icon" alt="icon of a mobile game">
             <div class="card-body">
               <h5 class="card-title">Legal strategy for mobile game</h5>
               <p class="card-text">I run a popular online mobile game company. We have millions of users all across the United States. Our mobile games are free, but have microtransactions. Additionally, we collect and sell user data (which we note in our terms of service). Finally, we run ads in our games, which also generate revenue. What should our legal strategy include, consider, or be?</p>
             </div>
           </div>
-          <div class="card case-card" onclick="revealDimensionSelector('apartment-overstay')">
+          <div class="card case-card" onclick="revealDimensionSelector('apartment-overstay')" tabindex="1">
+            <img src="./assets/img/apartment.svg" class="card-img-top case-icon" alt="icon of an apartment">
             <div class="card-body">
               <h5 class="card-title">Guest overstaying in apartment</h5>
               <p class="card-text">I let someone stay in my apartment as a favor, but now he won't leave. He doesn't have a job and is causing problems. His misbehaving daughter is here, too. When I asked him for money that he owes me, he hit me. My lease says guests can stay for 72 hours, but he's been here way longer. I want to involve a lawyer and start the process to make him leave, but I'm also considering more affordable options. What's the best thing to do?</p>
             </div>
           </div>
-          <div class="card case-card" onclick="revealDimensionSelector('bookstore-board')">
+          <div class="card case-card" onclick="revealDimensionSelector('bookstore-board')" tabindex="2">
+            <img src="./assets/img/bookstore.svg" class="card-img-top case-icon" alt="icon of a collection of books">
             <div class="card-body">
               <h5 class="card-title">Bookstore board of directors</h5>
               <p class="card-text">I was recently invited to join a board of directors for my local bookstore. I’ve never served on a board before. What do I need to know about this service? Additionally, there are a few things that concern me. First, I enjoy patronizing a number of bookstores around the city. Second, my uncle owns one of these bookstores. Finally, I own a substantial amount of Barnes and Nobles stock. Should I have any concerns, legal or otherwise, with joining this board?</p>
@@ -191,8 +197,16 @@
 
       </div>
 
-      <div class="margin-tb-1">
-        <p id="generated-case"></p>
+      <div class="margin-tb-1 chat-ui-wrapper" style="display: none">
+        <div class="row">
+          <div class="col-sm-2 bot-profile-wrapper">
+            <img src="./assets/img/bot-profile.svg" alt="icon of a chat bubble with antennas on top" style="width: 80px">
+          </div>
+          <div class="col-md-10">
+            <p class="generation-area" id="generated-case"></p>
+          </div>
+        </div>
+
       </div>
 
 
@@ -221,8 +235,9 @@
 
       <div class="row margin-tb-1">
 
-        <div class="col-sm-12 col-md-6 offset-md-3">
-          <div class="card" onclick="revealDimensionSelector('mobile-game')">
+        <div class="col-sm-12 col-md-8 offset-md-2">
+          <div class="card case-card" onclick="revealDimensionSelector('mobile-game')">
+            <img src="./assets/img/mobile-game.svg" class="card-img-top case-icon" alt="icon of a mobile game">
             <div class="card-body">
               <h5 class="card-title">Legal strategy for mobile game</h5>
               <p class="card-text">I run a popular online mobile game company. We have millions of users all across the United States. Our mobile games are free, but have microtransactions. Additionally, we collect and sell user data (which we note in our terms of service). Finally, we run ads in our games, which also generate revenue. What should our legal strategy include, consider, or be?</p>
@@ -279,8 +294,19 @@
 
       </div>
 
-      <div>
+      <!-- <div>
         <p id="templated-response"></p>
+      </div> -->
+      <div class="margin-tb-1 chat-ui-wrapper" style="display: none">
+        <div class="row">
+          <div class="col-sm-2 bot-profile-wrapper">
+            <img src="./assets/img/bot-profile.svg" alt="icon of a chat bubble with antennas on top" style="width: 80px">
+          </div>
+          <div class="col-md-10">
+            <div class="generation-area" id="templated-response"></div>
+
+          </div>
+        </div>
       </div>
 
     </section>

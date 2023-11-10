@@ -3,7 +3,7 @@
     "template": "content-violation",
     "title": "Content violation",
     "description": "Displays a warning message that the user's input violates the AI's content policy.",
-    "response": "This content may violate our content policy. If you believe this to be in error, please submit your feedback—your input will aid our research in this area. "
+    "response": "<div class=\"alert alert-danger\" role=\"alert\">This content may violate our content policy. If you believe this to be in error, please submit your feedback—your input will aid our research in this area.</div>"
   },
   {
     "template": "refusal",
