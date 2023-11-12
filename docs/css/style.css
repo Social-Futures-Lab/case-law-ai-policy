@@ -9,11 +9,14 @@ html {
 body {
     margin: 3rem 0 0 0;
     font-family: 'Georgia', serif;
+
 }
 
 .main-body {
-    padding-bottom: 1rem;
+    padding: 1rem;
     max-width: 800px;
+    width: 100%;
+    max-width: 820px;
 }
 
 h1 {
@@ -58,12 +61,10 @@ aside figure {
     margin-top: 1rem;
 }
 
-figure figcaption {
-    font-size: 12px;
-    font-style: italic;
-    color: rgb(128, 124, 124);
-    margin: auto;
-    padding: 2px 2px 2px 2px;
+figcaption {
+   font-family: var(--system-ui);
+   font-style: italic;
+   color: #888;
 }
 
 img {
