@@ -15,27 +15,54 @@
 <body class="d-flex justify-content-center">
 
 <div class="col-sm-12 col-lg-10 main-body">
-
   <h1>Case Law for AI Policy</h1>
   <h4>Democratically Aligning AI with Human Preferences through Case Repositories</h4>
 
   <div class="facepile">
-    <a href="https://homes.cs.washington.edu/~cqz/"><div class="circle-pic" style="background-image: url('./assets/people/cqz.png')"></div></a>
-    <a href="https://homes.cs.washington.edu/~axz/"><div class="circle-pic" style="background-image: url('./assets/people/axz.png')"></div></a>
-    <a href="https://kjfeng.me"><div class="circle-pic" style="background-image: url('./assets/people/kjfeng.jpg')"></div></a>
-    <a href="https://inyoungcheong.github.io/"><div class="circle-pic" style="background-image: url('./assets/people/icheon.webp')"></div></a>
-    <a href="https://king-xia.com/"><div class="circle-pic" style="background-image: url('./assets/people/kxia.jpg')"></div></a>
+    <a href="https://homes.cs.washington.edu/~cqz/"><div class="circle-pic" style="background-image: url('./assets/people/cqz.png')" onmouseover="boldNameAndAffiliation('jim')" onmouseout="unboldNameAndAffiliation('jim')"></div></a>
+    <a href="https://kjfeng.me"><div class="circle-pic" style="background-image: url('./assets/people/kjfeng.jpg')" onmouseover="boldNameAndAffiliation('kevin')" onmouseout="unboldNameAndAffiliation('kevin')"></div></a>
+    <a href="https://inyoungcheong.github.io/"><div class="circle-pic" style="background-image: url('./assets/people/icheon.webp')" onmouseover="boldNameAndAffiliation('inyoung')" onmouseout="unboldNameAndAffiliation('inyoung')"></div></a>
+    <a href="https://homes.cs.washington.edu/~axz/"><div class="circle-pic" style="background-image: url('./assets/people/axz.png')" onmouseover="boldNameAndAffiliation('amy')" onmouseout="unboldNameAndAffiliation('amy')"></div></a>
+    <a href="https://king-xia.com/"><div class="circle-pic" style="background-image: url('./assets/people/kxia.jpg')" onmouseover="boldNameAndAffiliation('king')" onmouseout="unboldNameAndAffiliation('king')"></div></a>
   </div>
 
-  <div class="full-width-container"><hr></div>
-
-  <div class="row metadata">
+  <!-- <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-12 author-col">
       <span id="all-names">Quan Ze (Jim) Chen, Amy X. Zhang, K. J. Kevin Feng, Inyoung Cheong, King Xia</span><br>
       <span id="all-school" class="uw">University of Washington</span><br>
       <span class="email">sfl-case-law@cs.washington.edu</span>
     </div>
+  </div> -->
+
+  <div class="row team-info">
+    <div class="col-sm-12 col-md-6 author-col">
+      <span class="header-label">TEAM</span><br>
+      <span id="jim">Quan Ze (Jim) Chen</span><br>
+      <span id="kevin">Kevin Feng</span><br>
+      <span id="inyoung">Inyoung Cheong</span><br>
+      <span id="amy">Amy X. Zhang</span><br>
+      <span id="king">King Xia</span><br>
+    </div>
+    <div class="col-sm-12 col-md-6 author-col">
+      <span class="header-label">AFFILIATIONS</span><br>
+      <span class="uw">University of Washington</span><br>
+      <span class="spacer"><br></span>
+      <span class="spacer"><br></span>
+      <span class="spacer"><br></span>
+      <span class="independent">Independent Attorney</span><br>
+    </div>
   </div>
+
+  <div class="team-info"><br>Work conducted as part of the <a href="https://openai.com/blog/democratic-inputs-to-ai">OpenAI "Democratic Inputs to AI" program</a>.</div>
+
+  <div class="cover-img-container">
+    <img src="./assets/img/case-law.svg" alt="isometric illustration of a user chatting with a chatbot, with a series of document-like cases situated behind the chatbot's response. The cases are placed there by hands with a diverse range of skin colours." style="width: 75%">
+  </div>
+
+
+
+
+
 
   <div class="full-width-container"><hr></div>
 
@@ -46,6 +73,8 @@
     <br>
     <span><a href="https://arxiv.org/abs/2310.07019#">Case Law Grounding: Aligning Judgments of Humans and AI on Socially-Constructed Concepts</a>, <em>Preprint</em>, Under Submission</span>
   </p>
+
+  <div class="full-width-container"><hr></div>
 
   <section>
     <h3>Introduction</h3>
@@ -248,46 +277,45 @@
 
       <h5>Response Templates</h5>
 
-      <div class="template-wrapper">
+      <div class="template-wrapper template-selector">
 
-          <div class="card template-button">
-            <!-- <img src="..." class="card-img-top" alt="..."> -->
+          <div class="card template-button" onclick="getResponseFromTemplate('content-violation')" tabindex="0">
+            <img src="./assets/img/content-violation.svg" class="card-img-top case-icon" alt="icon of an exclamation mark in a circle">
             <div class="card-body">
               <h5 class="card-title">Content violation</h5>
               <p class="card-text">Displays a warning message that the user's input violates the AI's content policy.</p>
-              <button class="btn btn-primary" onclick="getResponseFromTemplate('content-violation')">See example</button>
             </div>
           </div>
 
-          <div class="card template-button">
+          <div class="card template-button" onclick="getResponseFromTemplate('refusal')" tabindex="1">
+            <img src="./assets/img/refusal.svg" class="card-img-top case-icon" alt="icon of a do not symbol">
             <div class="card-body">
               <h5 class="card-title">Refusal to answer</h5>
               <p class="card-text">Avoids providing a response to the input and advises the user to seek professional advice instead.</p>
-              <button class="btn btn-primary" onclick="getResponseFromTemplate('refusal')">See example</button>
             </div>
           </div>
 
-          <div class="card template-button">
+          <div class="card template-button" onclick="getResponseFromTemplate('general-answer')" tabindex="2">
+            <img src="./assets/img/general-response.svg" class="card-img-top case-icon" alt="icon of an i in a circle above a hand">
             <div class="card-body">
               <h5 class="card-title">High-level answer without facts</h5>
               <p class="card-text">Provides a response that answers the input in broad strokes, stating advice rather than facts.</p>
-              <button class="btn btn-primary" onclick="getResponseFromTemplate('general-answer')">See example</button>
             </div>
           </div>
 
-          <div class="card template-button">
+          <div class="card template-button" onclick="getResponseFromTemplate('specific-answer')" tabindex="3">
+            <img src="./assets/img/specific-response.svg" class="card-img-top case-icon" alt="icon of a document with an i in a circle in the bottom right corner">
             <div class="card-body">
               <h5 class="card-title">Specific answer with facts</h5>
               <p class="card-text">Provides a detailed response that cites specific facts relevant to the input.</p>
-              <button class="btn btn-primary" onclick="getResponseFromTemplate('specific-answer')">See example</button>
             </div>
           </div>
 
-          <div class="card template-button">
+          <div class="card template-button"  onclick="getResponseFromTemplate('follow-up')" tabindex="4">
+            <img src="./assets/img/follow-up.svg" class="card-img-top case-icon" alt="icon of an question mark in a circle">
             <div class="card-body">
               <h5 class="card-title">Ask a follow-up question</h5>
               <p class="card-text">Responds with a question requesting more information.</p>
-              <button class="btn btn-primary" onclick="getResponseFromTemplate('follow-up')">See example</button>
             </div>
           </div>
 
@@ -329,8 +357,9 @@
 
   <div class="full-width-container"><hr></div>
 
-  <section>
-    This project was part of the OpenAI "Democratic Inputs to AI" grant.
+  <section class="footer">
+    This project was part of the <a href="https://openai.com/blog/democratic-inputs-to-ai">OpenAI "Democratic Inputs to AI" program</a>.<br>
+    Contact us: sfl-case-law [at] cs [dot] washington [dot] edu
 
   </section>
 

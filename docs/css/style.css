@@ -19,6 +19,7 @@ body {
 h1 {
     margin-bottom: 1rem;
     font-family: HoeflerText-Regular, 'Georgia', serif;
+    font-size: 3rem;
 }
 
 h3 {
@@ -33,7 +34,7 @@ h4, h5, h6 {
 }
 
 .metadata {
-    font-size: 0.75rem;
+    font-size: 0.85rem;
     color: #555;
     font-family: var(--system-ui);
 }
@@ -70,6 +71,13 @@ img {
     /* max-width: 100%; */
 }
 
+.full-width-container {
+  width: 100vw;
+  position: relative;
+  left: calc(-50vw + 50%);
+  padding: 0.5rem;
+}
+
 /* select {
     display: none !important;
 } */
@@ -96,6 +104,11 @@ aside {
 .fn-img {
     padding: 0 !important;
     width: 100% !important;
+}
+
+.cover-img-container {
+  text-align: center;
+  margin: 2rem 0 1rem 0;
 }
 
 .int-img-label {
@@ -129,19 +142,27 @@ aside {
     bottom: 0rem;
 } */
 
+.footer {
+  font-family: var(--system-ui);
+}
+
 .author-col {
     margin: 0 0 0.5rem 0;
 }
 
 .facepile {
-    margin-top: 2rem;
+    margin: 1rem 0 1rem 0;
 }
 
 .uw {
     color: #7632ff;
 }
 
-.ux-selector > .card {
+.independent {
+    color: #000;
+}
+
+.ux-selector > .card, .template-selector > .card {
   user-select: none;
   cursor: pointer;
 }
@@ -151,6 +172,14 @@ aside {
 .ux-selector > .card:focus {
   border-color: #007bff!important;
   box-shadow: 0px 0px 5px 0px #007bff;
+}
+
+.template-selector > .card:hover {
+  border-color: #229F90!important;
+}
+.template-selector > .card:focus {
+  border-color: #229F90!important;
+  box-shadow: 0px 0px 5px 0px #229F90;
 }
 
 .h-carousel {
@@ -204,6 +233,9 @@ aside {
 .case-card {
   min-width: 25rem;
   margin: 0rem 0.5rem 0rem 0.5rem !important;
+  font-family: var(--system-ui);
+  color: #888;
+  align-self: stretch;
 }
 
 .quote-text {
@@ -224,6 +256,8 @@ aside {
 .template-button {
   max-width: 15rem;
   margin: 0 1rem 1rem 0;
+  font-family: var(--system-ui);
+  color: #888;
 }
 
 .template-wrapper {
@@ -233,12 +267,6 @@ aside {
 
 #dimensions-placeholder, #dimensions-display {
   font-family: var(--system-ui);
-}
-
-.case-card {
-  font-family: var(--system-ui);
-  color: #888;
-  align-self: stretch;
 }
 
 #case-select, #dimensions-display {
@@ -251,7 +279,7 @@ aside {
 }
 
 .case-icon {
-  width: 80px;
+  width: 75px;
   margin: 1rem 0 0 1rem;
 }
 
@@ -278,3 +306,19 @@ aside {
   padding: 2rem;
   background-color: #eee;
 }
+
+.team-info {
+  font-family: var(--system-ui);
+}
+
+.header-label {
+  color: #aaa;
+  margin-top: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .spacer {
+    display: none;
+  }
+}
+

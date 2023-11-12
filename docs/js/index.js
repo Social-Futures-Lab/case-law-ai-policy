@@ -1,5 +1,22 @@
 'use strict';
 
+function boldNameAndAffiliation(id) {
+  document.getElementById(id).style.fontWeight = 700;
+  if (id === "king") {
+    document.getElementsByClassName("independent")[0].style.fontWeight = 700;
+  } else {
+    document.getElementsByClassName("uw")[0].style.fontWeight = 700;
+  }
+}
+
+function unboldNameAndAffiliation(id) {
+  document.getElementById(id).style.fontWeight = 400;
+  if (id === "king") {
+    document.getElementsByClassName("independent")[0].style.fontWeight = 400;
+  } else {
+    document.getElementsByClassName("uw")[0].style.fontWeight = 400;
+  }
+}
 
 function fetchDimensions(input_id) {
   return fetch('https://social.cs.washington.edu/case-law-ai-policy/assets/cases.json')
@@ -111,7 +128,7 @@ function generatedCaseSelector() {
           if (i < generatedCase.length) {
             target.innerHTML += generatedCase.charAt(i);
             i++;
-            setTimeout(typewriterEffect, 15);
+            setTimeout(typewriterEffect, 10);
           }
         }
 
@@ -143,6 +160,7 @@ function getResponseFromTemplate(templateID) {
 
     if (templateID === "content-violation") {
       target.innerHTML = response;
+      console.log(response)
     } else {
       let i = 0, isTag, text;
       // target.innerHTML = response;
@@ -157,10 +175,10 @@ function getResponseFromTemplate(templateID) {
         if( char === '>' ) isTag = false;
 
         if (isTag) return typewriterEffectFormatted();
-        setTimeout(typewriterEffectFormatted, 20);
+        setTimeout(typewriterEffectFormatted, 10);
       }
 
-      typewriterEffectFormatted();
+      setTimeout(() => { typewriterEffectFormatted();}, 500);
     }
 
 
