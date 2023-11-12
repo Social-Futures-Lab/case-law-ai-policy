@@ -60,10 +60,6 @@
   </div>
 
 
-
-
-
-
   <div class="full-width-container"><hr></div>
 
   <p class="metadata">
@@ -78,15 +74,16 @@
 
   <section>
     <h3>Introduction</h3>
-    <p>Traditionally, when we talk about "policy" for AI, we often think about broad statements like: "", "", or "".
-    However, it can be diffcult to both <em>create</em> and <em>apply</em> these kinds of policies when we encounter the intricacies of how AI interacts with socially-situated everyday settings,
+    <p>Traditionally, when we talk about "policy" for AI, we often think about broad statements like "do not output dangerous and unethical responses," "remove any and all illegal content," or "be as harmless as possible."
+    However, it can be diffcult to both <em>create</em> and <em>apply</em> these kinds of policies when we encounter the intricacies of how AI interacts with socially-situated everyday settings. For example, what does it mean for a chatbot to be "harmless" when it is used in an online therapy setting? Can the same response contain content that is legal for some users but illegal for others?
 
     Thus, we argue that a publicly accepted, actionable, and auditable policy for AI cannot rely on high-level guidelines alone.
     </p>
     <p>
-      In this project, we draw ideas from the legal framework of "case law" and propose a way to supplement traditional "constitutional" style policies for AI by creating a new "case law" inspired framework.
-      We introduce the idea of "case repositories", a collection of high-fidelity scenarios of human/social AI interactions, that can be judged democratically by communities, representative populations, and/or stakeholder groups to become a new form of policy.
+      In this project, we draw ideas from the legal framework of <em>case law</em> and propose a way to supplement traditional "constitutional" style policies for AI by creating a new case law inspired framework.
+      We introduce the idea of <em>case repositories</em>, a collection of high-fidelity scenarios of socially-situated interactions with an AI system that can be judged democratically by communities, representative populations, and/or stakeholder groups to unlock a new form of AI policymaking.
     </p>
+    <p>We detail our process for assembling case repositories and also invite you to explore our interactive demos below.</p>
   </section>
 
   <section>
@@ -95,172 +92,12 @@
     <section>
       <h4>Phase 1: Seeding the Case Repository with Expert Workshops</h4>
       <p>
-        We start by compiling a small set of cases based on discourse in online communities (Reddit, Twitter, media outlets, etc.).
+        We started by compiling a small set of cases based on discourse in online communities (Reddit, Twitter, media outlets, etc.).
         Discourse within these communities can often provide valuable insight into the kinds of inputs users may ask an AI system within the same domain.
-        However, for these cases
       </p>
-
-      <p>Explore Examples:</p>
-      <div class="row h-carousel-row">
-        <div id="case-select" class="col-12 h-carousel ux-selector" style="display: flex; align-items: start">
-          <div class="card case-card" onclick="fetchDimensions('mobile-game')" tabindex="0">
-            <img src="./assets/img/mobile-game.svg" class="card-img-top case-icon" alt="icon of a mobile game">
-            <div class="card-body">
-              <h5 class="card-title">Legal strategy for mobile game</h5>
-              <p class="card-text">I run a popular online mobile game company. We have millions of users all across the United States. Our mobile games are free, but have microtransactions. Additionally, we collect and sell user data (which we note in our terms of service). Finally, we run ads in our games, which also generate revenue. What should our legal strategy include, consider, or be?</p>
-            </div>
-          </div>
-          <div class="card case-card" onclick="fetchDimensions('apartment-overstay')" tabindex="1">
-            <img src="./assets/img/apartment.svg" class="card-img-top case-icon" alt="icon of an apartment">
-            <div class="card-body">
-              <h5 class="card-title">Guest overstaying in apartment</h5>
-              <p class="card-text">I let someone stay in my apartment as a favor, but now he won't leave. He doesn't have a job and is causing problems. His misbehaving daughter is here, too. When I asked him for money that he owes me, he hit me. My lease says guests can stay for 72 hours, but he's been here way longer. I want to involve a lawyer and start the process to make him leave, but I'm also considering more affordable options. What's the best thing to do?</p>
-            </div>
-          </div>
-          <div class="card case-card" onclick="fetchDimensions('bookstore-board')" tabindex="2">
-            <img src="./assets/img/bookstore.svg" class="card-img-top case-icon" alt="icon of a collection of books">
-            <div class="card-body">
-              <h5 class="card-title">Bookstore board of directors</h5>
-              <p class="card-text">I was recently invited to join a board of directors for my local bookstore. I’ve never served on a board before. What do I need to know about this service? Additionally, there are a few things that concern me. First, I enjoy patronizing a number of bookstores around the city. Second, my uncle owns one of these bookstores. Finally, I own a substantial amount of Barnes and Nobles stock. Should I have any concerns, legal or otherwise, with joining this board?</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <p>We then engage with experts in workshops to brainstorm dimensions:</p>
-      <div class="row padded-row" id="dimensions-placeholder">
-        <div class="col-12 v-cloud">
-          <p class="placeholder-text">Please select a case from the examples above to see the expert dimensions</p>
-        </div>
-      </div>
-
-      <div class="col-12 h-carousel" id="dimensions-display" style="display: flex; align-items: start">
-        <!-- <div class="card" style="width: 18rem;">
-          <div class="card-header">
-            User attribute: geography
-          </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item"><span class="quote-text">Where is the game operating and are there applicable and regulatory requirements (e.g., California = CCPA / CPRA)? — P13, attorney.</span></li>
-          </ul>
-        </div>
-        <div class="card" style="width: 18rem;">
-          <div class="card-header">
-            User attribute: vulnerable status
-          </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item"><span class="quote-text">Do the users include minors? — P6, law school dean.</span></li>
-          </ul>
-        </div>
-        <div class="card" style="width: 18rem;">
-          <div class="card-header">
-            Legal: standardized practices
-          </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item"><span class="quote-text">What type of user data is being collected and sold? (Personally Identifiable Information, biometric, etc.) — P7, law student.</span></li>
-          </ul>
-        </div>
-        <div class="card" style="width: 18rem;">
-          <div class="card-header">
-            Legal: complexity
-          </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item"><span class="quote-text">Advertisements implicate US federal and state laws, as well as several global laws depending on where the game is offered. — P13, attorney.</span></li>
-          </ul>
-        </div> -->
-      </div>
-
-      <p>If you're interested in further findings with experts, please read our <a href="#">Blog Post</a> about Phase 1.</p>
-    </section>
-    <section>
-      <h4>Phase 2: Refine the Case Repository using Public Input</h4>
-      <p>
-        To grow the existing seed cases into a case repository, we extend seed cases along expert dimensions
-        to create new cases that improve clarity and coverage of the case space. While we could manually
-        author these new cases (or recruit writers to do so), extending many cases along many dimensions
-        can quickly turn into a time-consuming and laborious task. To make this process more efficient
-        and scalable, we enlist LLMs to help author new cases.
-      </p>
-
-      <p>Please select a case below:</p>
-      <div class="row h-carousel-row">
-        <div id="case-select" class="col-12 h-carousel ux-selector" style="display: flex; align-items: start">
-          <div class="card case-card" onclick="revealDimensionSelector('mobile-game')" tabindex="0">
-            <img src="./assets/img/mobile-game.svg" class="card-img-top case-icon" alt="icon of a mobile game">
-            <div class="card-body">
-              <h5 class="card-title">Legal strategy for mobile game</h5>
-              <p class="card-text">I run a popular online mobile game company. We have millions of users all across the United States. Our mobile games are free, but have microtransactions. Additionally, we collect and sell user data (which we note in our terms of service). Finally, we run ads in our games, which also generate revenue. What should our legal strategy include, consider, or be?</p>
-            </div>
-          </div>
-          <div class="card case-card" onclick="revealDimensionSelector('apartment-overstay')" tabindex="1">
-            <img src="./assets/img/apartment.svg" class="card-img-top case-icon" alt="icon of an apartment">
-            <div class="card-body">
-              <h5 class="card-title">Guest overstaying in apartment</h5>
-              <p class="card-text">I let someone stay in my apartment as a favor, but now he won't leave. He doesn't have a job and is causing problems. His misbehaving daughter is here, too. When I asked him for money that he owes me, he hit me. My lease says guests can stay for 72 hours, but he's been here way longer. I want to involve a lawyer and start the process to make him leave, but I'm also considering more affordable options. What's the best thing to do?</p>
-            </div>
-          </div>
-          <div class="card case-card" onclick="revealDimensionSelector('bookstore-board')" tabindex="2">
-            <img src="./assets/img/bookstore.svg" class="card-img-top case-icon" alt="icon of a collection of books">
-            <div class="card-body">
-              <h5 class="card-title">Bookstore board of directors</h5>
-              <p class="card-text">I was recently invited to join a board of directors for my local bookstore. I’ve never served on a board before. What do I need to know about this service? Additionally, there are a few things that concern me. First, I enjoy patronizing a number of bookstores around the city. Second, my uncle owns one of these bookstores. Finally, I own a substantial amount of Barnes and Nobles stock. Should I have any concerns, legal or otherwise, with joining this board?</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="form-group">
-        And then select a dimension, followed by a value, to view alternative cases generated by GPT-4:
-      </div>
-
-      <div class="row margin-tb-1">
-        <div class="col-md-6">
-          <select class="form-select" aria-label="Default select example" id="dimension-selector" style="display: none">
-          </select>
-        </div>
-
-        <div class="col-md-6">
-          <select class="form-select" aria-label="Default select example" id="level-selector" style="display: none">
-
-          </select>
-        </div>
-
-      </div>
-
-      <div class="margin-tb-1 chat-ui-wrapper" style="display: none">
-        <div class="row">
-          <div class="col-sm-2 bot-profile-wrapper">
-            <img src="./assets/img/bot-profile.svg" alt="icon of a chat bubble with antennas on top" style="width: 80px">
-          </div>
-          <div class="col-md-10">
-            <p class="generation-area" id="generated-case"></p>
-          </div>
-        </div>
-
-      </div>
-
-
-
-      <h5>Measuring the Quality of the Case Repository</h5>
-      <p>
-        As you may have experienced yourself, while some generated cases can be <em>clear</em> and <em>thought-provoking</em>, for the wrong combination of input case and dimension,
-        the outputs might also be confusing!
-        <br>
-        Since cases in the case repository eventually define the ground for a policy, we want to focus the efforts of a community on just the "useful" cases.
-      </p>
-    </section>
-    <section>
-      <h4>Phase 3: Setting Precedents</h4>
-      <p>
-        Just like in broader society, different people in online spaces will have different values, and as a result, they will have different preferences for what they think is an appropriate AI interaction.
-        Sometimes, these different preferences can even be irreconcilable.
-        Thus, trying to find and define a universal set of values that all groups accept for guiding AI can be exceedingly difficult.
-      </p>
-      <p>
-        Here is where we believe a strong <strong>democratic process</strong> provides a solution for reaching a consensus!
-        In democratic society, even though individuals or groups may disagree with <em>each other</em>, the legitimacy of the democratic process itself (be it deliberation or voting) means that groups still recognize the final decision to be valid, knowing that their opinions were represented.
-        Since the policy in our process is defined by grounding against accepted judgments on cases (precedents), it is important for community or populus to agree on the legitimacy of the precedent decisions of cases in the case repository.
-        Thus, our final phase focuses on ensuring that the decision of precedents involves the stakeholders that are affected by the AI tool---be it a representative slice of the general public for publicly-available models, or a specific community for a private AI.
-      </p>
+      <p>One domain we engaged with in our experiments was the <b>legal domain</b>. That is, how should an AI system respond to users' request for legal advice? We will use the legal domain as a running example throughout this article.</p>
+      <p>We manually sourced our 33 seed cases from the popular subreddit <a href="https://www.reddit.com/r/legaladvice/">r/legaladvice</a>, editing slightly for anonymization and clarity. We then recruited individuals with expertise in the domain of our seed cases, where expertise is determined formally by factors such as awarded degrees, licenses, and professional practice. For the legal domain, our experts consisted of practicing attorneys, law researchers, legal consultants, and law students.</p>
+      <p>We conduct small-group workshops with our recruited experts in which we present our seed cases along with generic templates for AI responses to those seed cases. Our templates were empirically derived from high-level response styles we observed from exploring various state-of-the-art LLMs. Let's consider an example seed case, shown below.</p>
 
       <div class="row margin-tb-1">
 
@@ -275,7 +112,7 @@
         </div>
       </div>
 
-      <h5>Response Templates</h5>
+      <p>Next, we present our 5 templates. Click on each option to view a GPT-4 response generated using that template.</p>
 
       <div class="template-wrapper template-selector">
 
@@ -322,9 +159,6 @@
 
       </div>
 
-      <!-- <div>
-        <p id="templated-response"></p>
-      </div> -->
       <div class="margin-tb-1 chat-ui-wrapper" style="display: none">
         <div class="row">
           <div class="col-sm-2 bot-profile-wrapper">
@@ -336,6 +170,155 @@
           </div>
         </div>
       </div>
+
+      <p>Given our seed cases and AI response templates, we then facilitate a semi-structured discussion among experts on <b>key dimensions</b> that impact their decision on which AI response template(s) are appropriate. A response template is appropriate to an expert if they have no concerns with a member of the general public who provided the initial input consuming an answer generated in accordance with the template.</p>
+
+      <p>Within the semi-structured discussions, experts take turns presenting their key dimensions and how those dimensions impact their perception of response appropriateness. They receive comments and feedback from other experts. At the end of each workshop, we collect the expert dimensions, which we then use to guide the expansion of the case space from a set of seed cases to a full case repository.</p>
+
+      <p>For the domain of legal advice, we hosted 6 workshops conducted online via Zoom in August 2023 with 20 legal experts, with 3–4 legal experts per group. Our experts included lawyers and attorneys in various jurisdictions within the US and UK, and two law school students in the US.</p>
+
+      <p>Below are 3 example seed cases. Click on each to view expert dimensions and corresponding quotes from experts who participated in the workshops.</p>
+
+
+      <div class="row h-carousel-row">
+        <div id="case-select" class="col-12 h-carousel ux-selector" style="display: flex; align-items: start">
+          <div class="card case-card" onclick="fetchDimensions('mobile-game')" tabindex="0">
+            <img src="./assets/img/mobile-game.svg" class="card-img-top case-icon" alt="icon of a mobile game">
+            <div class="card-body">
+              <h5 class="card-title">Legal strategy for mobile game</h5>
+              <p class="card-text">I run a popular online mobile game company. We have millions of users all across the United States. Our mobile games are free, but have microtransactions. Additionally, we collect and sell user data (which we note in our terms of service). Finally, we run ads in our games, which also generate revenue. What should our legal strategy include, consider, or be?</p>
+            </div>
+          </div>
+          <div class="card case-card" onclick="fetchDimensions('apartment-overstay')" tabindex="1">
+            <img src="./assets/img/apartment.svg" class="card-img-top case-icon" alt="icon of an apartment">
+            <div class="card-body">
+              <h5 class="card-title">Guest overstaying in apartment</h5>
+              <p class="card-text">I let someone stay in my apartment as a favor, but now he won't leave. He doesn't have a job and is causing problems. His misbehaving daughter is here, too. When I asked him for money that he owes me, he hit me. My lease says guests can stay for 72 hours, but he's been here way longer. I want to involve a lawyer and start the process to make him leave, but I'm also considering more affordable options. What's the best thing to do?</p>
+            </div>
+          </div>
+          <div class="card case-card" onclick="fetchDimensions('bookstore-board')" tabindex="2">
+            <img src="./assets/img/bookstore.svg" class="card-img-top case-icon" alt="icon of a collection of books">
+            <div class="card-body">
+              <h5 class="card-title">Bookstore board of directors</h5>
+              <p class="card-text">I was recently invited to join a board of directors for my local bookstore. I’ve never served on a board before. What do I need to know about this service? Additionally, there are a few things that concern me. First, I enjoy patronizing a number of bookstores around the city. Second, my uncle owns one of these bookstores. Finally, I own a substantial amount of Barnes and Nobles stock. Should I have any concerns, legal or otherwise, with joining this board?</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row padded-row" id="dimensions-placeholder">
+        <div class="col-12 v-cloud">
+          <p class="placeholder-text">Please select a case from the examples above to see the expert dimensions</p>
+        </div>
+      </div>
+
+      <div class="col-12 h-carousel" id="dimensions-display" style="display: flex; align-items: start">
+      </div>
+
+      <p>If you're interested in further findings with experts, please read our <a href="#">Blog Post</a> containing detailed findings from our expert workshops.</p>
+      <br>
+    </section>
+
+    <section>
+      <h4>Phase 2: Refine the Case Repository using Public Input</h4>
+      <p>
+        To grow the existing seed cases into a case repository, we extend seed cases along expert dimensions
+        to create new cases that improve clarity and coverage of the case space. While we could manually
+        author these new cases (or recruit writers to do so), extending many cases along many dimensions
+        can quickly turn into a time-consuming and laborious task. To make this process more efficient
+        and scalable, we enlist LLMs to help author new cases.
+      </p>
+
+      <p>To do so, we prompt the LLM with the initial seed case, an expert dimension, and some participants' quotes about the dimension during our workshops. The latter was provided so that the LLM can infer the levels (possible values) of a dimension. The LLM then generates a case that resembles the original seed case but with key details (as specified by the dimensions and levels) modified.</p>
+      <p>First, select a case below. You will then be asked to select an expert dimension, as well as a level of that dimension. You will see the generated case after you've selected a level.</p>
+      <div class="row h-carousel-row">
+        <div id="case-select" class="col-12 h-carousel ux-selector" style="display: flex; align-items: start">
+          <div class="card case-card" onclick="revealDimensionSelector('mobile-game')" tabindex="0">
+            <img src="./assets/img/mobile-game.svg" class="card-img-top case-icon" alt="icon of a mobile game">
+            <div class="card-body">
+              <h5 class="card-title">Legal strategy for mobile game</h5>
+              <p class="card-text">I run a popular online mobile game company. We have millions of users all across the United States. Our mobile games are free, but have microtransactions. Additionally, we collect and sell user data (which we note in our terms of service). Finally, we run ads in our games, which also generate revenue. What should our legal strategy include, consider, or be?</p>
+            </div>
+          </div>
+          <div class="card case-card" onclick="revealDimensionSelector('apartment-overstay')" tabindex="1">
+            <img src="./assets/img/apartment.svg" class="card-img-top case-icon" alt="icon of an apartment">
+            <div class="card-body">
+              <h5 class="card-title">Guest overstaying in apartment</h5>
+              <p class="card-text">I let someone stay in my apartment as a favor, but now he won't leave. He doesn't have a job and is causing problems. His misbehaving daughter is here, too. When I asked him for money that he owes me, he hit me. My lease says guests can stay for 72 hours, but he's been here way longer. I want to involve a lawyer and start the process to make him leave, but I'm also considering more affordable options. What's the best thing to do?</p>
+            </div>
+          </div>
+          <div class="card case-card" onclick="revealDimensionSelector('bookstore-board')" tabindex="2">
+            <img src="./assets/img/bookstore.svg" class="card-img-top case-icon" alt="icon of a collection of books">
+            <div class="card-body">
+              <h5 class="card-title">Bookstore board of directors</h5>
+              <p class="card-text">I was recently invited to join a board of directors for my local bookstore. I’ve never served on a board before. What do I need to know about this service? Additionally, there are a few things that concern me. First, I enjoy patronizing a number of bookstores around the city. Second, my uncle owns one of these bookstores. Finally, I own a substantial amount of Barnes and Nobles stock. Should I have any concerns, legal or otherwise, with joining this board?</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+      </div>
+
+      <div class="row margin-tb-1">
+        <div class="col-md-6">
+          <select class="form-select" aria-label="Default select example" id="dimension-selector" style="display: none">
+          </select>
+        </div>
+
+        <div class="col-md-6">
+          <select class="form-select" aria-label="Default select example" id="level-selector" style="display: none">
+
+          </select>
+        </div>
+
+      </div>
+
+      <div class="margin-tb-1 chat-ui-wrapper" style="display: none">
+        <div class="row">
+          <div class="col-sm-2 bot-profile-wrapper">
+            <img src="./assets/img/bot-profile.svg" alt="icon of a chat bubble with antennas on top" style="width: 80px">
+          </div>
+          <div class="col-md-10">
+            <p class="generation-area" id="generated-case"></p>
+          </div>
+        </div>
+
+      </div>
+
+
+
+
+
+      <h5>Measuring the Quality of the Case Repository</h5>
+      <p>
+        As you may have experienced yourself, while some generated cases can be <em>clear</em> and <em>thought-provoking</em>, for the wrong combination of input case and dimension,
+        the outputs might also be confusing!
+        <br>
+        Since cases in the case repository eventually define the ground for a policy, we want to focus the efforts of a community on just the "useful" cases.
+      </p>
+      <br>
+    </section>
+    <section>
+      <h4>Phase 3: Setting Precedents</h4>
+      <p>
+        Just like in broader society, different people in online spaces will have different values, and as a result, they will have different preferences for what they think is an appropriate AI interaction.
+        Sometimes, these different preferences can even be irreconcilable.
+        Thus, trying to find and define a universal set of values that all groups accept for guiding AI can be exceedingly difficult.
+      </p>
+      <p>
+        Here is where we believe a strong <strong>democratic process</strong> provides a solution for reaching a consensus!
+        In democratic society, even though individuals or groups may disagree with <em>each other</em>, the legitimacy of the democratic process itself (be it deliberation or voting) means that groups still recognize the final decision to be valid, knowing that their opinions were represented.
+        Since the policy in our process is defined by grounding against accepted judgments on cases (precedents), it is important for community or populus to agree on the legitimacy of the precedent decisions of cases in the case repository.
+        Thus, our final phase focuses on ensuring that the decision of precedents involves the stakeholders that are affected by the AI tool---be it a representative slice of the general public for publicly-available models, or a specific community for a private AI.
+      </p>
+
+
+
+      <!-- <div>
+        <p id="templated-response"></p>
+      </div> -->
+
 
     </section>
   </section>
@@ -351,7 +334,7 @@
     <h3>Learn more</h3>
     <p>
       If you're interested in learning more about our process, we encourage you to check out our publications linked at the top.
-      Additionally, if you would like to collaborate with us on
+      Additionally, if you would like to collaborate with us, please reach out via our email in the footer.
     </p>
   </section>
 

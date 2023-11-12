@@ -29,7 +29,7 @@ h3 {
 }
 
 h4, h5, h6 {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     font-family: HoeflerText-Regular, 'Georgia', serif;
 }
 
@@ -144,6 +144,7 @@ aside {
 
 .footer {
   font-family: var(--system-ui);
+  margin-bottom: 1rem;
 }
 
 .author-col {

@@ -106,7 +106,7 @@ function generatedCaseSelector() {
     let levelSelector = document.getElementById('level-selector');
     let selectedLevelIndex = levelSelector.value;
     let target = document.getElementById('generated-case');
-    let targetWrapper = document.getElementsByClassName('chat-ui-wrapper')[0];
+    let targetWrapper = document.getElementsByClassName('chat-ui-wrapper')[1];
     if (levelSelector.options[selectedLevelIndex]) {
       target.innerHTML = "";
 
@@ -154,7 +154,7 @@ function getResponseFromTemplate(templateID) {
   .then (function (data) {
     let target = document.getElementById('templated-response');
     target.innerHTML = "";
-    document.getElementsByClassName('chat-ui-wrapper')[1].style.display = "block";
+    document.getElementsByClassName('chat-ui-wrapper')[0].style.display = "block";
     target.style.display = "block";
     let response = data.find(x => x.template === templateID).response;
 
