@@ -294,9 +294,18 @@
       <h5>Measuring the Quality of the Case Repository</h5>
       <p>
         As you may have experienced yourself, while some generated cases can be <em>clear</em> and <em>thought-provoking</em>, for the wrong combination of input case and dimension,
-        the outputs might also be confusing!
-        <br>
-        Since cases in the case repository eventually define the ground for a policy, we want to focus the efforts of a community on just the "useful" cases.
+        the synthetic cases might also be confusing! While we can generate synthetic cases based on any seed case, for an effective policy-making process, it is imperative that the synthetic cases provide a high level of information within the space of cases.
+        <!-- <br>
+        Since cases in the case repository eventually define the ground for a policy, we want to focus the efforts of a community on just the "useful" cases. -->
+      </p>
+      <p>
+        Defining a set of criteria is still an active area of investigation and experimentation for us. That said, we have some early visions of how we can evaluate our case repositories—we want to ensure that our set of cases:
+        <ol>
+          <li>are comprehensive, such that given a new case, we have a high likelihood of finding a relevant precedent similar to it;</li>
+          <li>are minimally ambiguous, such that individuals in the group or community can form well-reasoned arguments for their preferences without resorting to assumptions;</li>
+          <li>are close to a decision boundary (e.g., at least somewhat controversial), such that we should observe some disagreement between community members on the decision for that case.</li>
+        </ol>
+        We are also drawing inspiration from wikisurveys—surveys that allow groups to collaboratively create and refine survey questions—to allow members of a community to curate a set of cases that they collectively find useful. For example, we may use <a href="https://pol.is/home">Pol.is</a> to facilitate group deliberations on existing and new cases. As we continue to develop our strategies for case repository evaluation, we welcome any suggestions or feedback.
       </p>
       <br>
     </section>
@@ -308,11 +317,13 @@
         Thus, trying to find and define a universal set of values that all groups accept for guiding AI can be exceedingly difficult.
       </p>
       <p>
-        Here is where we believe a strong <strong>democratic process</strong> provides a solution for reaching a consensus!
+        Here is where we believe a strong <strong>democratic process</strong> provides a solution for reaching a consensus.
         In democratic society, even though individuals or groups may disagree with <em>each other</em>, the legitimacy of the democratic process itself (be it deliberation or voting) means that groups still recognize the final decision to be valid, knowing that their opinions were represented.
         Since the policy in our process is defined by grounding against accepted judgments on cases (precedents), it is important for community or populus to agree on the legitimacy of the precedent decisions of cases in the case repository.
-        Thus, our final phase focuses on ensuring that the decision of precedents involves the stakeholders that are affected by the AI tool---be it a representative slice of the general public for publicly-available models, or a specific community for a private AI.
+        Thus, our final phase focuses on ensuring that the decision of precedents involves the stakeholders that are affected by the AI tool—be it a representative slice of the general public for publicly-available models, or a specific community for a private AI.
       </p>
+
+      <p>As initial steps towards this democratic process, we are crowdsourcing appropriateness judgements from the public on AI responses to cases in our repository generated using our response templates. Stay tuned for results from our pilot study!</p>
 
 
 
@@ -325,18 +336,22 @@
   </section>
 
   <section>
-    <h4>Future: Applying Case Law Policies</h4>
-    <p>
+    <h3>Moving Forward: Applying Case Law Policies</h3>
+    <p>We presented a process for assembling case repositories, but how can we concretely apply case repositories to AI policymaking? We envision case repositories illuminating several key directions for future work.</p>
 
-    </p>
+    <p>We plan to investigate different techniques to directly integrate cases and case judgements as precedents. This involves 1) determining which cases to retrieve from the repository given a novel, unseen case, and 2) processing prior judgements in the retrieved cases into an actionable plan for generating a preference-aligned response. We will then test the performance of proposed approaches for performance and consistency on a wide variety of input cases and generative AI models.</p>
+
+    <p>We aim for case repositories to <em>supplement</em>, not <em>replace</em> nor <em>compete with</em> constitutional approaches to AI policymaking. Thus, it is important to think about workflows and feedback loops that combine constitutional and case-based approaches, particularly given <a href="https://arxiv.org/abs/2310.07019#"></a>recent research that shows the promising effectiveness of a combined workflow for aligning decisions of both human and AI decision-makers. Additionally, it is also worth considering how one approach may grow out of another. For example, one or more high-level principles can be instrumental in eliciting cases, or a body of precedents may be used to inform the creation of a constitution.</p>
+
+    <p>Finally, on the deliberation front, working with both case-based and constitutional approaches can allow us to empirically examine differences between the deliberation of cases compared to stated principles. Does having more concrete examples via cases allow people to more effectively weight arguments and reach an agreement more quickly? Or does it cause people to lose sight of the bigger picture? Perhaps cases can act as an intermediate step in the broader process of delegation and escalation. </p>
   </section>
 
   <section>
-    <h3>Learn more</h3>
+    <h3>Learn More</h3>
     <p>
-      If you're interested in learning more about our process, we encourage you to check out our publications linked at the top.
-      Additionally, if you would like to collaborate with us, please reach out via our email in the footer.
+      If you're interested in learning more about our process, we encourage you to check out our publications linked at the top, or reach out via our email in the footer.
     </p>
+    <p>Additionally, we are <b>actively recruiting experts in the fields of mental health and medicine for our workshops.</b> If you are an expert who would like to participate, please fill out the interest form for either <a href="https://forms.gle/kodD8nduWQxZXg3XA">mental health</a> or <a href="https://forms.gle/oshtHVTdigUYqQGk7">medicine</a>. After you submit your response, we will reach out to you directly if you are eligible to participate.</p>
   </section>
 
   <div class="full-width-container"><hr></div>
