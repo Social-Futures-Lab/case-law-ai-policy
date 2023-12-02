@@ -13,9 +13,10 @@ body {
 
 .main-body {
     padding: 1rem;
-    max-width: 800px;
     width: 100%;
     max-width: 820px;
+    margin: 0 auto;
+
 }
 
 h1 {
