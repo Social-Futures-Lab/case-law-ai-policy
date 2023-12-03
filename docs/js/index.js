@@ -108,6 +108,7 @@ function revealLevelSelector() {
 
 function generatedCaseSelector() {
   document.getElementById('level-selector').addEventListener('change', function () {
+
     let levelSelector = document.getElementById('level-selector');
     let selectedLevelIndex = levelSelector.value;
     let target = document.getElementById('generated-case');
@@ -133,7 +134,7 @@ function generatedCaseSelector() {
           if (i < generatedCase.length) {
             target.innerHTML += generatedCase.charAt(i);
             i++;
-            setTimeout(typewriterEffect, 10);
+            setTimeout(typewriterEffect, 0.1);
           }
         }
 
@@ -157,6 +158,9 @@ function getResponseFromTemplate(templateID) {
     return response.json();
   })
   .then (function (data) {
+    let startTimeStamp = Date.now();
+    console.log(startTimeStamp);
+    sessionStorage.setItem('startTimeStamp', startTimeStamp);
     let target = document.getElementById('templated-response');
     target.innerHTML = "";
     document.getElementsByClassName('chat-ui-wrapper')[0].style.display = "block";
@@ -170,6 +174,9 @@ function getResponseFromTemplate(templateID) {
       let i = 0, isTag, text;
       // target.innerHTML = response;
       function typewriterEffectFormatted() {
+        let latestStartTime = parseInt(sessionStorage.getItem('startTimeStamp'));
+        if (latestStartTime !== startTimeStamp) return;
+
         text = response.slice(0, ++i);
         if (text === response) return;
 
@@ -180,7 +187,7 @@ function getResponseFromTemplate(templateID) {
         if( char === '>' ) isTag = false;
 
         if (isTag) return typewriterEffectFormatted();
-        setTimeout(typewriterEffectFormatted, 10);
+        setTimeout(typewriterEffectFormatted, 0.1);
       }
 
       setTimeout(() => { typewriterEffectFormatted();}, 500);
@@ -197,6 +204,7 @@ window.onload = function () {
   loadHTMLChart('#mobile-game-chart', 'mobile-game');
   loadHTMLChart('#apartment-chart', 'apartment');
   loadHTMLChart('#bookstore-chart', 'bookstore');
+  sessionStorage.clear();
 }
 
 
