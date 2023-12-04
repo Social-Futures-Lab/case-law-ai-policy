@@ -108,7 +108,6 @@ function revealLevelSelector() {
 
 function generatedCaseSelector() {
   document.getElementById('level-selector').addEventListener('change', function () {
-
     let levelSelector = document.getElementById('level-selector');
     let selectedLevelIndex = levelSelector.value;
     let target = document.getElementById('generated-case');
@@ -197,6 +196,28 @@ function getResponseFromTemplate(templateID) {
   })
 }
 
+const resizeObserver = new ResizeObserver((entries) => {
+  for (const entry of entries) {
+    let elementID = entry.target.id;
+    const { width, height } = entry.contentRect;
+    if (elementID === "case-select" || elementID === "case-select-p2") {
+      let element = document.getElementById(elementID);
+      if (width > 1200) {
+        element.style.justifyContent = "center";
+      } else {
+        element.style.justifyContent = "flex-start";
+      }
+    }
+    if (elementID === "dimensions-display") {
+      if (width > 1000) {
+        document.getElementById('dimensions-display').style.justifyContent = "center";
+      } else {
+        document.getElementById('dimensions-display').style.justifyContent = "flex-start";
+      }
+    }
+  }
+})
+
 
 window.onload = function () {
   revealLevelSelector();
@@ -204,6 +225,9 @@ window.onload = function () {
   loadHTMLChart('#mobile-game-chart', 'mobile-game');
   loadHTMLChart('#apartment-chart', 'apartment');
   loadHTMLChart('#bookstore-chart', 'bookstore');
+  resizeObserver.observe(document.getElementById('case-select'));
+  resizeObserver.observe(document.getElementById('case-select-p2'));
+  resizeObserver.observe(document.getElementById('dimensions-display'));
   sessionStorage.clear();
 }
 

@@ -115,7 +115,7 @@
       <div class="row margin-tb-1">
 
         <div class="col-sm-12 col-md-8 offset-md-2">
-          <div class="card case-card" onclick="revealDimensionSelector('mobile-game')">
+          <div class="card case-card case-card-centered" onclick="revealDimensionSelector('mobile-game')">
             <img src="./assets/img/mobile-game.svg" class="card-img-top case-icon" alt="icon of a mobile game">
             <div class="card-body">
               <h5 class="card-title">Legal strategy for mobile game</h5>
@@ -127,7 +127,7 @@
 
       <p>Next, we present our 5 templates. Click on each option to view a GPT-4 response generated using that template.</p>
 
-      <div class="template-wrapper template-selector">
+      <div class="template-wrapper template-selector col-12 h-carousel">
 
           <div class="card template-button" onclick="getResponseFromTemplate('content-violation')" tabindex="0">
             <img src="./assets/img/content-violation.svg" class="card-img-top case-icon" alt="icon of an exclamation mark in a circle">
@@ -194,7 +194,7 @@
 
 
       <div class="row h-carousel-row">
-        <div id="case-select" class="col-12 h-carousel ux-selector" style="display: flex; align-items: start">
+        <div id="case-select" class="col-12 h-carousel ux-selector">
           <div class="card case-card" onclick="fetchDimensions('mobile-game')" tabindex="0">
             <img src="./assets/img/mobile-game.svg" class="card-img-top case-icon" alt="icon of a mobile game">
             <div class="card-body">
@@ -225,7 +225,7 @@
         </div>
       </div>
 
-      <div class="col-12 h-carousel" id="dimensions-display" style="display: flex; align-items: start">
+      <div class="col-12 h-carousel" id="dimensions-display">
       </div>
 
       <p>If you're interested in further findings with experts, please read our <a href="./assets/pubs/phase_1_blog_post.pdf">Blog Post</a> containing detailed findings from our expert workshops.</p>
@@ -245,7 +245,7 @@
       <p>To do so, we prompt the LLM with the initial seed case, an expert dimension, and some participants' quotes about the dimension during our workshops. The latter was provided so that the LLM can infer the levels (possible values) of a dimension. The LLM then generates a case that resembles the original seed case but with key details (as specified by the dimensions and levels) modified.</p>
       <p>First, select a case below. You will then be asked to select an expert dimension, as well as a level of that dimension. You will see the generated case after you've selected a level.</p>
       <div class="row h-carousel-row">
-        <div id="case-select" class="col-12 h-carousel ux-selector" style="display: flex; align-items: start">
+        <div id="case-select-p2" class="col-12 h-carousel ux-selector">
           <div class="card case-card" onclick="revealDimensionSelector('mobile-game')" tabindex="0">
             <img src="./assets/img/mobile-game.svg" class="card-img-top case-icon" alt="icon of a mobile game">
             <div class="card-body">
@@ -369,8 +369,11 @@
     </p>
     <p>Additionally, we are <b>actively recruiting experts in the fields of mental health and medicine for our workshops.</b> If you are an expert who would like to participate, please fill out the interest form for either <a href="https://forms.gle/kodD8nduWQxZXg3XA">mental health</a> or <a href="https://forms.gle/oshtHVTdigUYqQGk7">medicine</a>. After you submit your response, we will reach out to you directly if you are eligible to participate.</p>
   </section>
+  </div>
 
   <div class="full-width-container"><hr></div>
+
+  <div class="col-sm-12 col-lg-10 offset-lg-2 main-body">
 
   <section class="footer">
     This project was part of the <a href="https://openai.com/blog/democratic-inputs-to-ai">OpenAI "Democratic Inputs to AI" program</a>.<br>

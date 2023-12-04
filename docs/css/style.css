@@ -135,10 +135,9 @@ aside {
     margin: 0.5rem 1rem 0.5rem 0rem;
 }
 
-/* .school-name {
-    position: absolute;
-    bottom: 0rem;
-} */
+.spacer {
+  display: none;
+}
 
 .footer {
   font-family: var(--system-ui);
@@ -237,6 +236,10 @@ aside {
   align-self: stretch;
 }
 
+.case-card-centered {
+  margin: 0 auto !important;
+}
+
 .quote-text {
   font-style: italic;
   color: #888;
@@ -254,7 +257,7 @@ aside {
 
 .template-button {
   max-width: 15rem;
-  margin: 0 1rem 1rem 0;
+  margin: 0.5rem !important;
   font-family: var(--system-ui);
   color: #888;
 }
@@ -268,8 +271,14 @@ aside {
   font-family: var(--system-ui);
 }
 
-#case-select, #dimensions-display {
+#case-select, #dimensions-display, #case-select-p2 {
   padding: 0 0 0.5rem 0;
+  display: flex;
+  align-items: start;
+}
+
+.template-selector {
+  justify-content: center;
 }
 
 .card-title, .card-header {
@@ -315,9 +324,33 @@ aside {
   margin-top: 1rem;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) {
   .spacer {
-    display: none;
+    display: block;
   }
+
+  .h-carousel, .h-carousel-row {
+    width: 90vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -45vw;
+    margin-right: -45vw;
+  }
+
+  .case-card {
+    max-width: 25rem;
+  }
+
+
 }
+
+/* @media screen and (min-width: 1200px) {
+  #case-select, #dimensions-display {
+    justify-content: center;
+  }
+
+} */
+
+
 
