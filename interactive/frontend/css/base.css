@@ -195,6 +195,24 @@ blockquote {
   margin: 0.5rem;
   cursor: pointer;
 }
+
+.panel-all {
+  text-align: center;
+}
+.panel-all .panel {
+  display: inline-block;
+  height: 260px;
+  width: 30%;
+  margin: 0.5rem;
+  cursor: pointer;
+}
+
+.panel-lister .panel.active,
+.panel-scroller .panel.active,
+.panel-all .panel.active {
+  border-color: #e965a5;
+  background-color: #2b131f;
+}
 /** Tool Specific Styles **/
 .page {
   display: none;
