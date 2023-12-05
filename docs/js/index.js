@@ -158,7 +158,6 @@ function getResponseFromTemplate(templateID) {
   })
   .then (function (data) {
     let startTimeStamp = Date.now();
-    console.log(startTimeStamp);
     sessionStorage.setItem('startTimeStamp', startTimeStamp);
     let target = document.getElementById('templated-response');
     target.innerHTML = "";
@@ -166,9 +165,9 @@ function getResponseFromTemplate(templateID) {
     target.style.display = "block";
     let response = data.find(x => x.template === templateID).response;
 
+
     if (templateID === "content-violation") {
       target.innerHTML = response;
-      console.log(response)
     } else {
       let i = 0, isTag, text;
       // target.innerHTML = response;
