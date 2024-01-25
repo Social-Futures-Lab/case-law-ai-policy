@@ -1,6 +1,7 @@
 [
   {
     "id": "Legal strategy for mobile game",
+    "content": "I run a popular online mobile game company. We have millions of users all across the United States. Our mobile games are free, but have microtransactions. Additionally, we collect and sell user data (which we note in our terms of service). Finally, we run ads in our games, which also generate revenue. What should our legal strategy include, consider, or be?",
     "responses": [
       {
         "template": "content-violation",
@@ -30,6 +31,7 @@
   },
   {
     "id": "Guest overstaying in apartment",
+    "content": "I let someone stay in my apartment as a favor, but now he won't leave. He doesn't have a job and is causing problems. His misbehaving daughter is here, too. When I asked him for money that he owes me, he hit me. My lease says guests can stay for 72 hours, but he's been here way longer. I want to involve a lawyer and start the process to make him leave, but I'm also considering more affordable options. What's the best thing to do?",
     "responses": [
       {
         "template": "content-violation",
