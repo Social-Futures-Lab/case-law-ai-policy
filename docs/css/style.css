@@ -228,7 +228,7 @@ aside {
   background-color: #eee;
 }
 
-.case-card {
+.case-card, .case-card-re {
   min-width: 25rem;
   margin: 0rem 0.5rem 0rem 0.5rem !important;
   font-family: var(--system-ui);
@@ -324,6 +324,10 @@ aside {
   margin-top: 1rem;
 }
 
+#template-selector-re {
+  margin-top: 1rem;
+}
+
 @media screen and (min-width: 768px) {
   .spacer {
     display: block;
@@ -340,6 +344,10 @@ aside {
 
   .case-card {
     max-width: 25rem;
+  }
+
+  .case-card-re {
+    max-width: 35rem;
   }
 
 

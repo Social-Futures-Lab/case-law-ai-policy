@@ -1,0 +1,150 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Case Law for AI Policy - Response Explorer</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="keywords" content="Case Law for AI Policy, AI Alignment, LLMs, ChatGPT, OpenAI, Democratic Inputs to AI">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="https://pettanjs.github.io/dfcjs/dfc.js" type="text/javascript"></script>
+  <script src="./js/response-explorer.js" type="text/javascript"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y39RK891JP"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-Y39RK891JP');
+  </script>
+</head>
+
+<body class="">
+
+<div class="col-sm-12 col-lg-10 offset-lg-2 main-body">
+  <h3>Response Explorer: Mental Health</h3>
+
+</div>
+<hr>
+
+<div class="col-sm-12 col-lg-10 offset-lg-2 main-body">
+  <p class="metadata">
+    <strong>How to use:</strong>
+    <br>
+    <span>Brief instructions here...</span>
+  </p>
+
+
+</div>
+
+<hr>
+
+<div class="col-sm-12 col-lg-10 offset-lg-2 main-body">
+  <section>
+
+    <div class="">
+      <select class="form-select" aria-label="Selector UI" id="case-selector">
+      </select>
+    </div>
+
+    <div id="case-and-templates" style="display: none;">
+      <!-- case -->
+      <div class="row margin-tb-1">
+        <div class="col-sm-12 col-md-10 offset-md-1">
+          <div class="card case-card-re case-card-centered">
+            <div class="card-body" id="selected-case">
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- templates -->
+      <div class="template-wrapper template-selector col-12 h-carousel" id="template-selector-re">
+
+        <div class="card template-button" onclick="getResponseFromTemplate('content-violation')" tabindex="0">
+          <img src="./assets/img/content-violation.svg" class="card-img-top case-icon" alt="icon of an exclamation mark in a circle">
+          <div class="card-body">
+            <h5 class="card-title">Content violation</h5>
+            <p class="card-text">Displays a warning message that the user's input violates the AI's content policy.</p>
+          </div>
+        </div>
+
+        <div class="card template-button" onclick="getResponseFromTemplate('refusal')" tabindex="1">
+          <img src="./assets/img/refusal.svg" class="card-img-top case-icon" alt="icon of a do not symbol">
+          <div class="card-body">
+            <h5 class="card-title">Refusal to answer</h5>
+            <p class="card-text">Avoids providing a response to the input and advises the user to seek professional advice instead.</p>
+          </div>
+        </div>
+
+        <div class="card template-button" onclick="getResponseFromTemplate('general-answer')" tabindex="2">
+          <img src="./assets/img/general-response.svg" class="card-img-top case-icon" alt="icon of an i in a circle above a hand">
+          <div class="card-body">
+            <h5 class="card-title">High-level response without facts</h5>
+            <p class="card-text">Provides a response that answers the input in broad strokes, stating advice rather than facts.</p>
+          </div>
+        </div>
+
+        <div class="card template-button" onclick="getResponseFromTemplate('specific-answer')" tabindex="3">
+          <img src="./assets/img/specific-response.svg" class="card-img-top case-icon" alt="icon of a document with an i in a circle in the bottom right corner">
+          <div class="card-body">
+            <h5 class="card-title">Specific response with facts</h5>
+            <p class="card-text">Provides a detailed response that cites specific facts relevant to the input.</p>
+          </div>
+        </div>
+
+        <div class="card template-button" onclick="getResponseFromTemplate('provide-rec')" tabindex="4">
+          <img src="./assets/img/provide-rec.svg" class="card-img-top case-icon" alt="icon of a document with a lightbulb">
+          <div class="card-body">
+            <h5 class="card-title">Provide concrete recommendation(s)</h5>
+            <p class="card-text">Provides a response containing one or more concrete, actionable recommendations.</p>
+          </div>
+        </div>
+
+        <div class="card template-button"  onclick="getResponseFromTemplate('follow-up')" tabindex="5">
+          <img src="./assets/img/follow-up.svg" class="card-img-top case-icon" alt="icon of an question mark in a circle">
+          <div class="card-body">
+            <h5 class="card-title">Ask a follow-up question</h5>
+            <p class="card-text">Responds with a question requesting more information.</p>
+          </div>
+        </div>
+
+    </div>
+
+    <div class="margin-tb-1 chat-ui-wrapper" style="display: none">
+      <div class="row">
+        <div class="col-sm-2 bot-profile-wrapper">
+          <img src="./assets/img/bot-profile.svg" alt="icon of a chat bubble with antennas on top" style="width: 80px">
+        </div>
+        <div class="col-md-10">
+          <div class="generation-area" id="templated-response"></div>
+
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+
+
+
+
+</div>
+
+<div class="full-width-container"><hr></div>
+
+ <div class="col-sm-12 col-lg-10 offset-lg-2 main-body">
+
+  <section class="footer">
+    This project was part of the <a href="https://openai.com/blog/democratic-inputs-to-ai">OpenAI "Democratic Inputs to AI" program</a>.<br>
+    Contact us: sfl-case-law [at] cs [dot] washington [dot] edu
+
+  </section>
+
+</div>
+</body>
+</html>
